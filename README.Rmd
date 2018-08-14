@@ -1,0 +1,39 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# wizard
+
+A set of convenience functions for everyday programming. Work in progress. Currently just a bunch of functions that I use very often.
+
+## qbarplot
+
+The `qbarplot()` function allows for quickly generating ggplot2 functions from dataframes:
+
+```{r example, eval = FALSE}
+
+qbarplot(diamonds, color, cut)
+
+```
+
+
+## load_packages
+
+The `load_packages()` functions checks wher the packages specified as its arguments are installed and installs them if they are not. If `require = TRUE` (the default), they are also loaded in the process.
+
+
+## To be continued
+
+More functions following soon!
