@@ -7,7 +7,7 @@ A set of convenience functions for everyday programming. Work in progress. Curre
 qbarplot
 --------
 
-The `qbarplot()` function allows for quickly generating ggplot2 functions from dataframes:
+The `qbarplot()` function allows for quickly generating ggplot2 barplots from raw dataframes:
 
 ``` r
 
