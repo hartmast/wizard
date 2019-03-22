@@ -83,7 +83,7 @@ qbarplot <- function(df, x, fill, wrap=NULL,
   cols <- which(colnames(df) %in% l)
 
   # make sure the colnames are in the right order
-  cols <- unlist(lapply(1:length(l), function(i) grep(l[[i]], colnames(df))))
+  cols <- unlist(lapply(1:length(l), function(i) grep(paste("^", l[[i]], "$", sep=""), colnames(df))))
 
 
   if(wrap100) {
