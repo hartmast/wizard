@@ -5,8 +5,10 @@
 \title{Quick barplots}
 \usage{
 qbarplot(df, x, fill, wrap = NULL, raw = FALSE, text = TRUE,
-  cex = 3, percent = TRUE, dodge = FALSE, xlab, ylab,
-  wrap100 = FALSE, tibble = TRUE, vjust, display0 = FALSE, ...)
+  vjust_strip, cex = 3, cex_axes = 18, percent = TRUE,
+  dodge = FALSE, xlab, ylab, wrap100 = FALSE, tibble = TRUE,
+  display0 = FALSE, angle = 0, hjust = 0.5, vjust = 0.5, color,
+  rev.palette = FALSE, ...)
 }
 \arguments{
 \item{df}{a data frame with raw data}
@@ -21,7 +23,11 @@ qbarplot(df, x, fill, wrap = NULL, raw = FALSE, text = TRUE,
 
 \item{text}{if TRUE (the default), absolute frequencies are displayed on the bars using geom_text.}
 
+\item{vjust_strip}{vertical adjustment of the text, if text = TRUE. Behaves differently for stacked and dodged barplots. Under the hood, vjust is part of the position_stacked() call in stacked barplots (default: .5, i.e. in the middle of each portion of the bar) and part of the geom_text() call in dodged barplots (-.5, i.e. slightly above each bar).}
+
 \item{cex}{size of the text displaying the absolute frequencies.}
+
+\item{cex_axes}{size of the axis labels, 18pt by default. To get the ggplot2 default values and customize with your own ggplot layers, just enter a non-numeric value.}
 
 \item{percent}{If TRUE (the default), the y axis displays proportions in percent format. Requires package "scales". If FALSE (or if "scales" is not installed), it is displayed as a fraction between 0 and 1.}
 
@@ -35,9 +41,17 @@ qbarplot(df, x, fill, wrap = NULL, raw = FALSE, text = TRUE,
 
 \item{tibble}{If raw = TRUE and tibble = TRUE (the default), the raw data are returned as a tibble. Only works if the "tibble" package is installed. See ?tibble::tibble for more information.}
 
-\item{vjust}{vertical adjustment of the text, if text = TRUE. Behaves differently for stacked and dodged barplots. Under the hood, vjust is part of the position_stacked() call in stacked barplots (default: .5, i.e. in the middle of each portion of the bar) and part of the geom_text() call in dodged barplots (-.5, i.e. slightly above each bar).}
-
 \item{display0}{If text = TRUE, display0 = TRUE (the default) prevents 0 values (if there are any) from being shown on the text display.}
+
+\item{angle}{Use this to rotate the x tick labels.}
+
+\item{hjust}{horizontal justification of x tick labels.}
+
+\item{vjust}{vertical justification of x tick labels.}
+
+\item{color}{color scheme to be used for the plot. Can be an ordinary palette (see ?palettes) or an RColorBrewer palette, see ?scale_fill_brewer for available palettes. Set to FALSE to get ggplot's default color scheme.}
+
+\item{rev.palette}{if a color palette is used, setting rev.palette to TRUE will reverse it.}
 
 \item{...}{Further arguments to be passed on to ggplot().}
 }
