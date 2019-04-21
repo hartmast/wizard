@@ -14,6 +14,19 @@ The `qbarplot()` function allows for quickly generating ggplot2 barplots from ra
 qbarplot(diamonds, color, cut)
 ```
 
+qbeeswarm
+---------
+
+The `qbeeswarm()` function allows for quickly generating ggplot2 beeswarm plots with overlaid boxplots. Depends on the ggbeeswarm package.
+
+``` r
+
+set.seed(200)
+df <- data.frame(A = c(rep("high", 50), rep("lo", 50)),
+                 B = round(runif(n = 100)*100))
+qbeeswarm(df, x = A, y = B)
+```
+
 load\_packages
 --------------
 

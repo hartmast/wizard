@@ -29,6 +29,20 @@ qbarplot(diamonds, color, cut)
 ```
 
 
+## qbeeswarm
+
+The `qbeeswarm()` function allows for quickly generating ggplot2 beeswarm plots with overlaid boxplots. Depends on the ggbeeswarm package.
+
+```{r example2, eval = FALSE}
+
+set.seed(200)
+df <- data.frame(A = c(rep("high", 50), rep("lo", 50)),
+                 B = round(runif(n = 100)*100))
+qbeeswarm(df, x = A, y = B)
+
+```
+
+
 ## load_packages
 
 The `load_packages()` functions checks wher the packages specified as its arguments are installed and installs them if they are not. If `require = TRUE` (the default), they are also loaded in the process.

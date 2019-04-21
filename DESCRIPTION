@@ -9,7 +9,7 @@ Description: This is a set of convenience functions for programming and plotting
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: ggplot2
+Imports: ggplot2, ggbeeswarm
 Suggests: scales,
     tibble, RColorBrewer
 RoxygenNote: 6.1.0
