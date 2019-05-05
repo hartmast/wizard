@@ -2,7 +2,7 @@
 wizard
 ======
 
-A set of convenience functions for everyday programming. Work in progress. Currently just a bunch of functions that I use very often.
+A set of convenience functions for everyday programming and for visualization. Work in progress. Currently just a bunch of functions that I use very often.
 
 qbarplot
 --------
@@ -30,7 +30,7 @@ qbeeswarm(df, x = A, y = B)
 load\_packages
 --------------
 
-The `load_packages()` functions checks wher the packages specified as its arguments are installed and installs them if they are not. If `require = TRUE` (the default), they are also loaded in the process.
+The `load_packages()` function checks whether the packages specified as its arguments are installed and installs them if they are not. If `require = TRUE` (the default), they are also loaded in the process.
 
 To be continued
 ---------------
