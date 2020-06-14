@@ -12,4 +12,4 @@ LazyData: true
 Imports: ggplot2, ggbeeswarm
 Suggests: scales,
     tibble, RColorBrewer
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
