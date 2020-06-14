@@ -12,6 +12,7 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "README-"
 )
+
 ```
 
 # wizard
@@ -39,6 +40,20 @@ set.seed(200)
 df <- data.frame(A = c(rep("high", 50), rep("lo", 50)),
                  B = round(runif(n = 100)*100))
 qbeeswarm(df, x = A, y = B)
+
+```
+
+## pretty_df
+
+The `pretty_df()` function formats the output of dataframes in a way that there are two digits after the decimal separator. Note that the "prettified" version will often not be printed in the R output but it will appear e.g. if you export the data to a CSV file.
+
+```{r example3, eval = FALSE}
+
+df <- data.frame(a = c("a", "b", "c"),
+                 b = c(0.89469435394539469569, 123684.2683523825, 0.00000005))
+
+p_df <- pretty_df(df)
+write.csv(p_df, "prettydataframe.csv")
 
 ```
 
