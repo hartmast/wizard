@@ -4,9 +4,22 @@
 \alias{qbeeswarm}
 \title{Quick beeswarm-boxplots}
 \usage{
-qbeeswarm(df, x, y, xlab, ylab, box = TRUE, notch = TRUE,
-  fill_box = "lightblue", alpha = 0.3, cex_axes = 18, grid = FALSE,
-  colour, bw = FALSE, ...)
+qbeeswarm(
+  df,
+  x,
+  y,
+  xlab,
+  ylab,
+  box = TRUE,
+  notch = TRUE,
+  fill_box = "lightblue",
+  alpha = 0.3,
+  cex_axes = 18,
+  grid = FALSE,
+  colour,
+  bw = FALSE,
+  ...
+)
 }
 \arguments{
 \item{df}{a data frame}

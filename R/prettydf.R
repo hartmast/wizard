@@ -3,7 +3,7 @@
 #' @description Convenience function for nice dataframe output
 #' @param df A dataframe.
 #' @return a dataframe.
-#' @example
+#' @examples
 #' df <- data.frame(a = c("a", "b", "c"),
 #'                  b = c(0.86965965, 989687.89068, 278.9058574))
 #' pretty_df(df)

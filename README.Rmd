@@ -58,6 +58,39 @@ write.csv(p_df, "prettydataframe.csv")
 ```
 
 
+## format_age
+
+This might be helpful for researchers in the field of language acquisition, where we often work with age values formatted like "years;months.days", e.g. "2;3.4". R will usually parse these as character values, and if there are no trailing zeros (as in "02;03.04"), they will be sorted incorrectly (so that a child at 02;10.17 is suddenly younger than a child at 2;1.11). This function circumvents this problem by adding trailing zeros. If you prefer the formatting without trailing zeros, use `factors = TRUE` and the factor levels of the original age column will be ordered correctly.
+
+```{r example4, eval=FALSE}
+
+# for vectors
+x <- c("1;3.4", "1;2.5", "1;4.3")
+format_age(x)
+
+# for dataframes:
+df <- c(age = c("1;3.4", "1;2.5", "1;4.3"),
+        utterance = "bla", "bla", "bla")
+
+format_age(df,
+           col = "age", # name of the age column
+           month_separator = ";", # sign separating month from year
+           day_separator = ".", # sign separating day from month
+           factors = T # reorder factor levels of original column (default is FALSE)
+           )
+
+# if the column name of the dataframe is "age" or "Age"
+# (or is the only column containing the string "age" or "Age"),
+# you don't have to specify the column name:
+df <- c(age = c("1;3.4", "1;2.5", "1;4.3"),
+        utterance = "bla", "bla", "bla")
+
+format_age(df)
+
+
+````
+
+
 ## load_packages
 
 The `load_packages()` function checks whether the packages specified as its arguments are installed and installs them if they are not. If `require = TRUE` (the default), they are also loaded in the process.

@@ -15,3 +15,8 @@ a dataframe.
 \description{
 Convenience function for nice dataframe output
 }
+\examples{
+df <- data.frame(a = c("a", "b", "c"),
+                 b = c(0.86965965, 989687.89068, 278.9058574))
+pretty_df(df)
+}

@@ -4,11 +4,30 @@
 \alias{qbarplot}
 \title{Quick barplots}
 \usage{
-qbarplot(df, x, fill, wrap = NULL, raw = FALSE, text = TRUE,
-  vjust_strip, cex = 3, cex_axes = 18, percent = TRUE,
-  dodge = FALSE, xlab, ylab, wrap100 = FALSE, tibble = TRUE,
-  display0 = FALSE, angle = 0, hjust = 0.5, vjust = 0.5, color,
-  rev.palette = FALSE, ...)
+qbarplot(
+  df,
+  x,
+  fill,
+  wrap = NULL,
+  raw = FALSE,
+  text = TRUE,
+  vjust_strip,
+  cex = 3,
+  cex_axes = 18,
+  percent = TRUE,
+  dodge = FALSE,
+  xlab,
+  ylab,
+  wrap100 = FALSE,
+  tibble = TRUE,
+  display0 = FALSE,
+  angle = 0,
+  hjust = 0.5,
+  vjust = 0.5,
+  color,
+  rev.palette = FALSE,
+  ...
+)
 }
 \arguments{
 \item{df}{a data frame with raw data}
