@@ -183,11 +183,11 @@ qbarplot <- function(df, x, fill, wrap=NULL,
     x.value = as.character(l[[1]])
     fill.value = as.character(l[[2]])
 
-    p <- ggplot2::ggplot(t1, ggplot2::aes_string(x = x.value,
-                                 y = "RelFreq",
-                                 fill = fill.value,
-                                 group = fill.value,
-                                 label = "Freq"), ...)
+    p <- ggplot2::ggplot(t1, ggplot2::aes(x = .data[[x.value]],
+                                 y = .data[["RelFreq"]],
+                                 fill = .data[[fill.value]],
+                                 group = .data[[fill.value]],
+                                 label = .data[["Freq"]]), ...)
 
     if(is.numeric(cex_axes)) {
       p <- p +
